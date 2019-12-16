@@ -1,0 +1,13 @@
+LM::startUp(): Successfully started.
+Object Created
+Object Created
+Object Created
+WM.m_deletions size before updates 2
+WM.m_deletions size before delete 2
+Deleted
+WM.m_deletions size after delete 2
+WM.m_deletions size before delete 2
+Deleted
+WM.m_deletions size after delete 2
+WM.m_deletions size 0
+LM::shutDown(): Successfully stopped.

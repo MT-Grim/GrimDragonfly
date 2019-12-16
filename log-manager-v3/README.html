@@ -1,0 +1,51 @@
+<h1 id="readme---logmanager">README - LogManager</h1>
+<p>Version 3.1</p>
+<h2 id="overview">Overview</h2>
+<p>This is a compiled version of the core LogManager (no optional elements) from the <a href="https://dragonfly.wpi.edu/">Dragonfly Book</a>, version 6.</p>
+<p><strong>Important!</strong> To be used, the LogManager <em>must</em> be accompanied by an implementation of the Manager class. See Chapter 4.2 of the Dragonfly Book.</p>
+<h2 id="files">Files</h2>
+<p>Platforms, organized by directory:</p>
+<ul>
+<li>windows</li>
+<li>linux</li>
+<li>mac</li>
+</ul>
+<p>Relevant files under each directory:</p>
+<ul>
+<li><code>LogManager.o</code> or <code>LogManager.obj</code> - the compiled manager</li>
+<li><code>LogManager.h</code> - the header file</li>
+</ul>
+<h2 id="install">Install</h2>
+<p>Linux/Mac: Copy the <code>.o</code> and <code>.h</code> files appropriate to your platform to your project directory.</p>
+<p>Windows: Right click on your project in the Solution Explorer window, select &quot;Add&quot; -&gt; &quot;Existing Item&quot; and choose both <code>LogManager.obj</code> and <code>LogManager.h</code>.</p>
+<h2 id="testing">Testing</h2>
+<p>After implementing <code>Manager.c</code> and <code>Manager.cpp</code> (see the Dragonfly Book, Chapter 4.2), test with an new/empty project. e.g.,</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp">
+<span class="ot">#include &quot;LogManager.h&quot;</span>
+
+<span class="dt">int</span> main(<span class="dt">int</span> argc, <span class="dt">char</span> *argv[]) {
+
+  <span class="co">// Start up LogManager.</span>
+  <span class="kw">if</span> (LM.startUp()) {
+    printf(<span class="st">&quot;Error starting log manager!</span><span class="ch">\n</span><span class="st">&quot;</span>);
+    <span class="kw">return</span> <span class="dv">1</span>;
+  }
+  
+  <span class="co">// Successfully started, so write some stuff.</span>
+  LM.writeLog(<span class="st">&quot;This is a test.&quot;</span>);
+  LM.writeLog(<span class="st">&quot;This is test </span><span class="ch">%d</span><span class="st">.&quot;</span>, <span class="dv">2</span>);
+  LM.writeLog(<span class="st">&quot;This is </span><span class="ch">%s</span><span class="st"> </span><span class="ch">%0.1f</span><span class="st">.&quot;</span>, <span class="st">&quot;test&quot;</span>, <span class="fl">2.5</span>);
+        
+  <span class="co">// Shutdown LogManager.</span>
+  LM.shutDown();
+}</code></pre></div>
+<p>After compiling and running, you should find a file named <code>dragonfly.log</code> file with:</p>
+<pre><code>LM::startUp(): Successfully started.
+This is a test.
+This is test 2.
+This is test 2.5.
+LM::shutDown(): Successfully stopped.</code></pre>
+<h2 id="next">Next</h2>
+<p>Use in a similar fashion for subsequent engine development.</p>
+<p>Happy logging!</p>
+<p>-- Mark, <code>claypool@cs.wpi.edu</code></p>

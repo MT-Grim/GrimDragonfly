@@ -1,0 +1,8 @@
+﻿  main.cpp
+  Manager.cpp
+C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\Manager.cpp(13,3): error C2065: 'm_type': undeclared identifier
+C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\Manager.cpp(17,10): error C2065: 'm_type': undeclared identifier
+C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\Manager.cpp(21,3): error C2065: 'm_is_started': undeclared identifier
+C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\Manager.cpp(25,3): error C2065: 'm_is_started': undeclared identifier
+  Generating Code...
+C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\Manager.cpp(29,10): error C2065: 'm_is_started': undeclared identifier
