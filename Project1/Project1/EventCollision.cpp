@@ -1,4 +1,5 @@
 #include "EventCollision.h"
+#include "LogManager.h"
 
 EventCollision::EventCollision() {
 
@@ -49,5 +50,48 @@ void EventCollision::setPosition(Vector new_pos) {
 Vector EventCollision::getPosition() const {
 
 	return m_pos;
+
+}
+
+void testEventCollision() {
+
+	Object a;
+
+	Object* a_ptr = &a;
+
+	Object b;
+
+	Object* b_ptr = &b;
+
+	Vector v(1.0, 1.0);
+
+	EventCollision ec(a_ptr, b_ptr, v);
+
+	if (ec.getObject1() == a_ptr) {
+
+		LM.writeLog("Getobj1() test passed");
+	}
+
+	if (ec.getObject2() == b_ptr) {
+
+		LM.writeLog("Getobj2() test passed");
+	}
+
+	if (ec.getPosition().getX() == 1.0 && ec.getPosition().getY() == 1.0) {
+		
+		LM.writeLog("EC getPosition() test passed");
+
+	}
+
+	ec.setObject1(b_ptr);
+
+	ec.setObject2(a_ptr);
+
+	if (ec.getObject1() == b_ptr && ec.getObject2() == a_ptr) {
+
+		LM.writeLog("setObject() test passed");
+
+	}
+
 
 }

@@ -6,6 +6,8 @@
 #include "Manager.h"
 #include "Object.h"
 #include "WorldManager.h"
+#include "Vector.h"
+#include "EventCollision.h"
 
 #include <cstdio>
 #include <string>
@@ -15,6 +17,12 @@ void testClock();
 void eventStepTest();
 void testEvent();
 void testObject();
+void testVector();
+void testEventCollision();
+//no test for EventOut
+
+//need tests for 
+
 
 
 int main(int argc, char* argv[]) {
@@ -22,11 +30,27 @@ int main(int argc, char* argv[]) {
 	LM.startUp();
 
 	LM.setFlush();
-	//testClock();
-	//eventStepTest();
-	//testEvent();
-	//testObject();
+	LM.writeLog("TestClock start");
+	testClock();
+	LM.writeLog("TestClock end");
+	LM.writeLog("eventStepTest start");
+	eventStepTest();
+	LM.writeLog("eventStepTest end");
+	LM.writeLog("testEvent start");
+	testEvent();
+	LM.writeLog("testEvent end");
+	LM.writeLog("testObject start");
+	testObject();
+	LM.writeLog("testObject end");
+	LM.writeLog("testVector start");
+	testVector();
+	LM.writeLog("testVector end");
+	LM.writeLog("testEventCollision start");
+	testEventCollision();
+	LM.writeLog("testEventCollision end");
+	LM.writeLog("testWorldManager start");
 	WM.testWorldManager();
+	LM.writeLog("testWorldManager end");
 
 
 //LM.writeLog("This tests the 'to string' for other tests: %s", test.c_str());

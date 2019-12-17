@@ -36,4 +36,6 @@ public:
 
 	 // Add two Vec tors , r e t u r n new Vec tor .
 	Vector operator +(const Vector & other) const;
+
+	void testVector();
 };

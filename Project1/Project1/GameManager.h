@@ -1,5 +1,7 @@
 #pragma once
 
+#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
 #include "Manager.h"
 
 // D e f a u l t frame t ime ( game l o o p t ime ) i n m i l l i s e c o n d s (3 3 ms == 30 f / s ) .

@@ -1,13 +1,15 @@
 LM::startUp(): Successfully started.
-Object Created
-Object Created
-Object Created
-WM.m_deletions size before updates 2
-WM.m_deletions size before delete 2
-Deleted
-WM.m_deletions size after delete 2
-WM.m_deletions size before delete 2
-Deleted
-WM.m_deletions size after delete 2
-WM.m_deletions size 0
-LM::shutDown(): Successfully stopped.
+TestClock start
+m_previous_time initialization test: 1909486000
+coutdelta 1000000
+coutsplit 1001000
+TestClock end
+eventStepTest start
+e.setStepCount 1 : 
+ee.setStepCount 1 : 
+e.setStepCount 0 : 
+ee.setStepCount 0 : 
+e.setStepCount 10 : 
+ee.setStepCount 10 : 
+e.setStepCount -1 : 
+ee.setStepCount -1 : 

@@ -13,6 +13,13 @@ namespace df {
 
 	}
 
+	InputManager& InputManager::getInstance() {
+
+		static InputManager instance;
+		return instance;
+
+	}
+
 	int InputManager::startUp() {
 
 		if (DM.startUp() == -1) {
@@ -378,4 +385,14 @@ namespace df {
 		};
 
 	}
+
+	void testInputManager() {
+
+
+
+
+
+	}
+
+
 }

@@ -1,6 +1,8 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Window/Keyboard.hpp>
+#include <SFML/Graphics/Color.hpp>
 
 #include "DisplayManager.h"
 #include "LogManager.h"
@@ -10,6 +12,13 @@ namespace df {
 	DisplayManager::DisplayManager() {
 
 		m_p_window = NULL;
+		
+	}
+
+	DisplayManager& DisplayManager::getInstance() {
+
+		static DisplayManager instance;
+		return instance;
 
 	}
 
@@ -47,6 +56,12 @@ namespace df {
 			return -1;
 
 		}
+	}
+
+	void DisplayManager::shutDown() {
+
+		m_p_window->close();
+	
 	}
 
 	int DisplayManager::getHorizontal() const {

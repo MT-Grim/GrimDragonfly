@@ -195,82 +195,6 @@ namespace df {
 
 	}
 
-	void WorldManager::testWorldManager() {
-
-		//create some objects to add to WM
-		Object* a = new Object;
-		Object* b = new Object;
-		Object* c = new Object;
-
-		//set types for objOfType test
-		a->setType("Test");
-		b->setType("Test");
-		c->setType("Test");
-
-		/*
-		//test by adding obj again.
-		if (WM.insertObject(&a) == 0 && WM.insertObject(&b) == 0 && WM.insertObject(&c) == 0) {
-
-			LM.writeLog("WM.insertObject Passed");
-
-		}
-
-		//remove dup objects
-		if (WM.removeObject(&a) == 0) {
-
-			LM.writeLog("WM.removeObj a Passed");
-		}
-
-		if (WM.removeObject(&b) == 0) {
-
-			LM.writeLog("WM.removeObj b Passed");
-		}
-
-		if (WM.removeObject(&c) == 0) {
-
-			LM.writeLog("WM.removeObj c Passed");
-		}
-
-		//remove original c obj
-		if (WM.removeObject(&c) == 0) {
-
-			LM.writeLog("WM.removeObj dup obj test passed");
-
-		}
-
-		//test remove obj that isnt there.
-		if (WM.removeObject(&c) == -1) {
-
-			LM.writeLog("WM.removeObj obj dont exist test passed");
-
-		}
-
-
-		//LM.writeLog("WM.m_deletions size %s", std::to_string(m_deletions.size()).c_str());
-
-		//test MFD
-		if (WM.markForDelete(&a) == 1) {
-
-			LM.writeLog("markForDelete test 1 passed");
-
-		}
-
-		//test MFD with a alread in list
-		if (WM.markForDelete(&a) == 0) {
-
-			LM.writeLog("markForDelete test 2 passed");
-
-		}
-		*/
-
-		m_deletions.insert(m_deletions.end(), a);
-		m_deletions.insert(m_deletions.end(), b);
-		LM.writeLog("WM.m_deletions size before updates %s", std::to_string(m_deletions.size()).c_str());
-		//LM.writeLog("&a.getType() %s", a.getType().c_str());
-		WM.update();
-
-	}
-
 	bool WorldManager::positionsIntersect(Vector p1, Vector p2) const{
 
 		if (abs(p1.getX() - p2.getX()) <= 1 && abs(p1.getY() - p2.getY()) <= 1){
@@ -358,5 +282,83 @@ namespace df {
 		p_o->eventHandler(&ov);
 
 		return 0;
+	}
+
+	void WorldManager::testWorldManager() {
+
+		//create some objects to add to WM
+		Object* a = new Object;
+		Object* b = new Object;
+		Object* c = new Object;
+
+		//set types for objOfType test
+		a->setType("Test");
+		b->setType("Test");
+		c->setType("Test");
+
+		
+		//test by adding obj again.
+		if (WM.insertObject(a) == 0 && WM.insertObject(b) == 0 && WM.insertObject(c) == 0) {
+
+			LM.writeLog("WM.insertObject Passed");
+
+		}
+
+		//remove dup objects
+		if (WM.removeObject(a) == 0) {
+
+			LM.writeLog("WM.removeObj a Passed");
+		}
+
+		if (WM.removeObject(b) == 0) {
+
+			LM.writeLog("WM.removeObj b Passed");
+		}
+
+		if (WM.removeObject(c) == 0) {
+
+			LM.writeLog("WM.removeObj c Passed");
+		}
+
+		//remove original c obj
+		if (WM.removeObject(c) == 0) {
+
+			LM.writeLog("WM.removeObj dup obj test passed");
+
+		}
+
+		//test remove obj that isnt there.
+		if (WM.removeObject(c) == -1) {
+
+			LM.writeLog("WM.removeObj obj dont exist test passed");
+
+		}
+
+
+		//LM.writeLog("WM.m_deletions size %s", std::to_string(m_deletions.size()).c_str());
+
+		//test MFD
+		if (WM.markForDelete(a) == 1) {
+
+			LM.writeLog("markForDelete test 1 passed");
+
+		}
+
+		//test MFD with a alread in list
+		if (WM.markForDelete(a) == 0) {
+
+			LM.writeLog("markForDelete test 2 passed");
+
+		}
+		
+
+		m_deletions.insert(m_deletions.end(), a);
+		m_deletions.insert(m_deletions.end(), b);
+		LM.writeLog("WM.m_deletions size before updates %s", std::to_string(m_deletions.size()).c_str());
+		//LM.writeLog("&a.getType() %s", a.getType().c_str());
+		
+
+
+
 	}
 }

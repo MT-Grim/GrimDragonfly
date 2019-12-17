@@ -1,14 +1,2 @@
-﻿  EventCollision.cpp
-C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\EventCollision.cpp(7,10): warning C4101: 'm_p_obj2': unreferenced local variable
-  EventOut.cpp
-  GameManager.cpp
-C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\EventCollision.cpp(6,10): warning C4101: 'm_p_obj1': unreferenced local variable
-C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\SFML-2.5\include\SFML\Graphics\Rect.inl(81,19): error C2589: '(': illegal token on right side of '::'
-  InputManager.cpp
-  main.cpp
-  Manager.cpp
-  Object.cpp
-C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\SFML-2.5\include\SFML\Graphics\Rect.inl(114,21): error C2589: '(': illegal token on right side of '::'
-  WorldManager.cpp
-  Generating Code...
-C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\Object.cpp(9,7): warning C4101: 'm_id': unreferenced local variable
+﻿  Event.cpp
+  Project1.vcxproj -> C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\x64\Debug\Project1.exe

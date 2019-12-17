@@ -37,5 +37,7 @@ const std::string COLLISION_EVENT = "df::collision";
 	
 		 // Re turn p o s i t i o n o f c o l l i s i o n .
 		 Vector getPosition() const;
+
+		 void testEventCollision();
 	
 };

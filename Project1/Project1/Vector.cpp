@@ -84,3 +84,55 @@ Vector Vector::operator +(const Vector& other) const {
 	v.m_y = m_y + other.m_y;
 	return v;
 };
+
+void testVector() {
+
+	Vector v;
+
+	Vector c(1.0, 1.0);
+
+	Vector d(2.0, 2.0);
+
+	if (v.getX() == 0) {
+
+		LM.writeLog("Vector() test passed");
+
+	}
+
+	if (c.getX() == 1.0) {
+
+		LM.writeLog("Vector(float float) test passed");
+
+	}
+
+	if (d.getMagnitude() == 2) {
+
+		LM.writeLog("getMagnitude() test passed");
+
+	}
+
+	c.scale(2);
+
+	if (c.getX() == 2 && c.getY() == 2) {
+
+		LM.writeLog("scale() test passed");
+
+	}
+
+	c.operator+(d);
+
+	if (c.getX() == 4 && c.getY() == 4) {
+
+		LM.writeLog("+() test passed");
+
+	}
+
+	v.setXY(1, 1);
+
+	if (v.getX() == 1 && v.getY() == 1) {
+
+		LM.writeLog("setXY() test passed");
+
+	}
+
+}

@@ -22,6 +22,8 @@ namespace df {
 
 		void getInput();
 
+		void testInputManager();
+
 	};
 
 }
