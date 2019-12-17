@@ -53,5 +53,8 @@ namespace df {
 
 		sf::RenderWindow* getWindow() const;
 
+		void testDisplayManager();
+
+		int HelloWorld();
 	};
 }

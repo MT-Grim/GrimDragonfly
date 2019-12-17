@@ -73,7 +73,7 @@
     <IncludePath>C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\log-manager-v3\windows;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\log-manager-v3\windows;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\log-manager-v3\windows;C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1;$(IncludePath)</IncludePath>
     <LibraryPath>$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
@@ -95,11 +95,11 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\SFML-2.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>winmm.lib;sfml-system.lib;sfml-window.lib;sfml-graphics.lib;sfml-audio.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-audio.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\SFML-2.5\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>

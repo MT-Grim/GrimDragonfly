@@ -6,6 +6,7 @@
 
 #include "DisplayManager.h"
 #include "LogManager.h"
+#include <iostream>
 
 namespace df {
 
@@ -38,7 +39,7 @@ namespace df {
 
 		m_font.loadFromFile(FONT_FILE_DEFAULT);
 
-		if (m_font.loadFromFile(FONT_FILE_DEFAULT)) {
+		if (m_font.loadFromFile(FONT_FILE_DEFAULT) == true) {
 
 			LM.writeLog("Font File Loaded");
 
@@ -207,4 +208,70 @@ namespace df {
 		return 0;
 
 	}
+
+	void DisplayManager::testDisplayManager() {
+
+		if (DM.HelloWorld() == -1) {
+
+			LM.writeLog("DM test failed");
+
+		}
+
+	}
+
+	int DisplayManager::HelloWorld() {
+
+		sf::Font font;
+		if (font.loadFromFile("df-font.tff") == false) {
+			 std::cout << "Error unable to load font" << std::endl;
+			 return -1;
+			
+		}
+		
+
+			 sf::Text text;
+		 text.setFont(font); 
+		 text.setString("Hello, World!"); 
+		 text.setCharacterSize(32); 
+		 text.setFillColor(sf::Color::Green); 
+		 text.setStyle(sf::Text::Bold); 
+		 text.setPosition(96, 134); 
+		
+
+			 sf::RenderWindow * p_window =
+			 new sf::RenderWindow(sf::VideoMode(400, 300), "SFML-Hello, World!");
+		 if (!p_window) {
+			 std::cout << " Error, unable to locate renderwindow." << std::endl;
+			 return -1;
+			
+		}
+
+			 p_window->setMouseCursorVisible(false);
+
+			 p_window->setVerticalSyncEnabled(true);
+		
+
+			 while (1) {
+			
+
+				 p_window->clear();
+
+				 p_window->draw(text);
+			 p_window->display();
+
+				 sf::Event event;
+			 while (p_window->pollEvent(event)) {
+				 if (event.type == sf::Event::Closed) {
+					 p_window->close();
+					 delete p_window;
+					 return 0;
+					
+				}
+				
+			} 
+
+		} 
+
+	} 
+
 }

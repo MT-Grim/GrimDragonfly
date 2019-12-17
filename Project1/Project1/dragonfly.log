@@ -1,8 +1,9 @@
 LM::startUp(): Successfully started.
+Font File Loaded
 TestClock start
-m_previous_time initialization test: 1909486000
-coutdelta 1000000
-coutsplit 1001000
+m_previous_time initialization test: 698723000
+coutdelta 1001000
+coutsplit 1000000
 TestClock end
 eventStepTest start
 e.setStepCount 1 : 
@@ -13,3 +14,51 @@ e.setStepCount 10 :
 ee.setStepCount 10 : 
 e.setStepCount -1 : 
 ee.setStepCount -1 : 
+eventStepTest end
+testEvent start
+eVENT.setType: Event 
+eVENT.setType:  
+eVENT.setType: null 
+testEvent end
+testObject start
+Object Created
+o.setType: Blarg
+o.setID: 1
+o.setID: 0
+o.setPosition x: 1.000000 y: 1.000000
+testObject end
+testVector start
+x and y set to 1.000000 , 1.000000
+x and y set to 2.000000 , 2.000000
+Vector() test passed
+Vector(float float) test passed
+scale() test passed
+setXY() test passed
+testVector end
+testEventCollision start
+Object Created
+Object Created
+x and y set to 1.000000 , 1.000000
+Getobj1() test passed
+Getobj2() test passed
+EC getPosition() test passed
+setObject() test passed
+testEventCollision end
+testWorldManager start
+Object Created
+Object Created
+Object Created
+WM.insertObject Passed
+WM.removeObj a Passed
+WM.removeObj b Passed
+WM.removeObj c Passed
+WM.removeObj dup obj test passed
+WM.removeObj obj dont exist test passed
+markForDelete test 1 passed
+markForDelete test 2 passed
+WM.m_deletions size before updates 3
+testWorldManager end
+testDisplayManager start
+DM test failed
+testDisplayManager end
+LM::shutDown(): Successfully stopped.

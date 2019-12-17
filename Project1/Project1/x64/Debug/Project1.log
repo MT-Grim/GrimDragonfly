@@ -1,2 +1,6 @@
-﻿  Event.cpp
+﻿  DisplayManager.cpp
+C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\DisplayManager.cpp(104,33): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\DisplayManager.cpp(114,35): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\DisplayManager.cpp(158,38): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
+C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\Project1\DisplayManager.cpp(163,39): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
   Project1.vcxproj -> C:\Users\mtuck\OneDrive\Documents\Visual Studio 2019\Projects\Project2\Project1\x64\Debug\Project1.exe

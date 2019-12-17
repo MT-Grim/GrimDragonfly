@@ -8,6 +8,7 @@
 #include "WorldManager.h"
 #include "Vector.h"
 #include "EventCollision.h"
+#include "DisplayManager.h"
 
 #include <cstdio>
 #include <string>
@@ -30,6 +31,9 @@ int main(int argc, char* argv[]) {
 	LM.startUp();
 
 	LM.setFlush();
+
+	DM.startUp();
+
 	LM.writeLog("TestClock start");
 	testClock();
 	LM.writeLog("TestClock end");
@@ -51,6 +55,9 @@ int main(int argc, char* argv[]) {
 	LM.writeLog("testWorldManager start");
 	WM.testWorldManager();
 	LM.writeLog("testWorldManager end");
+	LM.writeLog("testDisplayManager start");
+	DM.testDisplayManager();
+	LM.writeLog("testDisplayManager end");
 
 
 //LM.writeLog("This tests the 'to string' for other tests: %s", test.c_str());
